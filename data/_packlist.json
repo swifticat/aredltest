@@ -14,6 +14,6 @@
             "the_hallucination",
             "cosmic_ray"
         ],
-        "colour": "linear-gradient(90deg, rgba(50,98,168,1) 50%, rgba(93,91,168,1) 50%)"
+        "colour": "linear-gradient(45deg, rgba(50,98,168,1) 75%, rgba(93,91,168,1) 25%)"
     }
 ]
