@@ -118,7 +118,7 @@ export default {
                     </template>
                      <h3>> How to Submit Records</h3>
                     <p>
-                        Join our discord server, and  use /record submit
+                        Join our discord server, go to list request channel. Then post your video of completing the level with your placement opinion and attempt count.
                     </p>
                     <h3>> Submission Requirements</h3>
                     <p>
@@ -140,7 +140,7 @@ export default {
                         - The record has been achieved without using a secret way or a bugged route
                     </p>
                     <p>
-                        - Cheat Indicator is required if you are using a mod menu that supports one, like Megahack v8.
+                        - The geode Click Between Frames mod is allowed, but please tell us that you are using it.
                     </p>
                     <p>
                         - End stats (The whole box must appear for at least one frame)
@@ -155,7 +155,7 @@ export default {
                         - Using the 2.1 GDPS is allowed for levels verified in 2.1, up to 360 FPS/TPS
                     </p>
                     <p>
-                        - Raw footage (or a pointercrate record of the level) AND clicks will ALWAYS be required for levels in the top 250.
+                        - Raw footage (or a pointercrate record of the level) AND clicks will ALWAYS be required for levels in the top 20.
                     </p>
                     <p>
                         - You always need handcam for every level that is listed as "(Solo)" on the list.
