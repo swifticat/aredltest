@@ -7,5 +7,13 @@
             "zstep"
         ],
         "colour": "linear-gradient(145deg, rgba(154,158,173,1) 0%, rgba(115,120,140,1) 50%, rgba(82,86,105,1) 100%)"
+    },
+    {
+        "name": "Copy Pack",
+        "levels": [
+            "the_hallucination",
+            "cosmic_ray"
+        ],
+        "colour": "linear-gradient(90deg, rgba(50,98,168,1) 50%, rgba(93,91,168,1) 50%)"
     }
 ]
