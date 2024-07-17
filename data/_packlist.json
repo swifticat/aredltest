@@ -18,7 +18,7 @@
             "the_hallucination",
             "cosmic_ray"
         ],
-        "colour": "linear-gradient(50deg, rgba(92,173,119,1) 0%, rgba(81,138,100,1) 50%, rgba(73,117,77,1) 100%)"
+        "colour": "linear-gradient(145deg, rgba(154,158,173,1) 0%, rgba(115,120,140,1) 50%, rgba(82,86,105,1) 100%)"
         },
          {
         "name": "Brainrot Pack",
@@ -31,6 +31,6 @@
             "merry_crimo",
             "zstep"
         ],
-        "colour": "linear-gradient(90deg, rgba(181,74,110,1) 0%, rgba(145,47,79,1) 50%, rgba(148,38,75,1) 100%)"
+        "colour": "linear-gradient(145deg, rgba(154,158,173,1) 0%, rgba(115,120,140,1) 50%, rgba(82,86,105,1) 100%)"
     }
 ]
