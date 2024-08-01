@@ -9,6 +9,12 @@
     "password": "Copyable",
 	"records": [
 		{
+			"user": "[Wave] sk80",
+			"link": "https://youtu.be/nonexistant",
+			"percent": 100,
+			"hz": 240
+		},
+        {
 			"user": "[Wave] Qwapi",
 			"link": "https://youtu.be/nonexistant",
 			"percent": 100,
