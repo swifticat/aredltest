@@ -7,5 +7,12 @@
     "verification": "Link",
     "percentToQualify": 49,
     "password": "Copyable",
-    "records": []
+    "records": [
+        {
+			"user": "[Wave] Qwapi",
+			"link": "https://youtu.be/nonexistant",
+			"percent": 100,
+			"hz": 90
+		},
+    ]
 }
