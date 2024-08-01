@@ -1,0 +1,18 @@
+{
+    "id": 338,
+    "name": "Fear Factory",
+    "author": "[MPT] 12s",
+    "creators": ["[MPT] 12s","Th3K1ll3r72"],
+    "verifier": "[MPT] 12s",
+    "verification": "https://www.youtu.be./nonexistant",
+    "percentToQualify": 100,
+    "password": "Copyable",
+    "records": [
+        {
+			"user": "[Wave] sk80",
+			"link": "https://youtu.be/nonexistant",
+			"percent": 100,
+			"hz": 240
+		}
+    ]
+}
