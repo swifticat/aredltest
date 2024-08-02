@@ -4,15 +4,17 @@
         "members": [
             {
                 "name": "sk80",
-                "link": "https://www.youtube.com/@certifiedbestyoutuber"
+                "link": "https://www.youtube.com/channel/UC4N25ULgPMmeKv5XwgJD5-A"
             }
         ]
     },
     {
         "role": "coowner",
         "members": [
-        {
-        "name": "GDoof"
-        "link": "https://www.youtube.com/channel/insertgdoofschannel"
+            {
+                "name": "GDoof",
+                "link": "https://www.youtube.com/channel/UCDp8z5-vtUg8QJdDM5Yh-tg"
+            }
+        ]
     }
 ]
