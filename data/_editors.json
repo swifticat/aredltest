@@ -9,7 +9,7 @@
         ]
     },
     {
-        "role": "coowner",
+        "role": "admin",
         "members": [
             {
                 "name": "GDoof",
