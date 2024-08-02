@@ -13,6 +13,12 @@
 			"link": "https://youtu.be/nonexistant",
 			"percent": 100,
 			"hz": 240
-		}
+		},
+        {
+            "user": "doom",
+            "link": "https://www.youtube.com/watch?v=72LuuCrD1U4"
+            "percent": 100,
+            "hz": CBF
+        }
     ]
 }
