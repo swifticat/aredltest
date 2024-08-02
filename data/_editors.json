@@ -9,7 +9,10 @@
         ]
     },
     {
-        "name": "GDoof",
-        "link": "https://www.youtube.com/channel/insertgdoofschannel"
+        "role": "coowner",
+        "members: [
+        {
+        "name": "GDoof"
+        "link": https://www.youtube.com/channel/insertgdoofschannel
     }
 ]
