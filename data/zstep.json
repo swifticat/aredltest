@@ -1,15 +1,15 @@
 {
     "id": 81,
     "name": "ZStep",
-    "author": "[OWO] Kultrixx",
+    "author": "Kultrixx",
     "creators": [],
-    "verifier": "[OWO] Kultrixx",
+    "verifier": "Kultrixx",
     "verification": "Link",
     "percentToQualify": 49,
     "password": "Copyable",
     "records": [
         {
-			"user": "[Wave] Qwapi",
+			"user": "Qwapi",
 			"link": "https://youtu.be/nonexistant",
 			"percent": 100,
 			"hz": 90
