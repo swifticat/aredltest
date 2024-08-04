@@ -1,15 +1,15 @@
 {
     "id": 98,
     "name": "The Hallucination",
-    "author": "[Wave] sk80",
+    "author": "sk80",
     "creators": [],
-    "verifier": "[Wave] sk80",
+    "verifier": "sk80",
     "verification": "https://youtu.be/H6BeQPRaAOA",
     "percentToQualify": 65,
     "password": "Copyable",
     "records": [
  {
-			"user": "[Wave] sk80",
+			"user": "sk80",
 			"link": "https://youtu.be/H6BeQPRaAOA",
 			"percent": 100,
 			"hz": 240
