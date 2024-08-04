@@ -1,15 +1,15 @@
 {
     "id": 343,
     "name": "Arrival",
-    "author": "[MPT] 12s",
+    "author": "12s",
     "creators": [],
-    "verifier": "[MPT] 12s",
+    "verifier": "12s",
     "verification": "https://www.youtube.com/shorts/Bc--ZtiCFgI?feature=share",
     "percentToQualify": 100,
     "password": "Copyable",
     "records": [
         {
-			"user": "[Wave] sk80",
+			"user": "sk80",
 			"link": "https://youtu.be/nonexistant",
 			"percent": 100,
 			"hz": 240
