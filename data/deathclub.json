@@ -1,27 +1,27 @@
 {
     "id": 335,
     "name": "DeathClub",
-    "author": "[MPT] 12s",
+    "author": "12s",
     "creators": [],
-    "verifier": "[MPT] 12s",
+    "verifier": "12s",
     "verification": "Link",
     "percentToQualify": 100,
     "password": "Copyable",
 	"records": [
 		{
-			"user": "[Wave] sk80",
+			"user": "sk80",
 			"link": "https://youtu.be/nonexistant",
 			"percent": 100,
 			"hz": 240
 		},
         {
-			"user": "[Wave] Qwapi",
+			"user": "Qwapi",
 			"link": "https://youtu.be/nonexistant",
 			"percent": 100,
 			"hz": 90
 		},
         {
-			"user": "[Wave] Tourbillon",
+			"user": "Tourbillon",
 			"link": "https://youtu.be/nonexistant",
 			"percent": 100,
 			"hz": 90
