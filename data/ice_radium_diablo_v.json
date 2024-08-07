@@ -19,6 +19,12 @@
 			"link": "https://youtu.be/nonexistant",
 			"percent": 100,
 			"hz": 240
+		},
+        {
+			"user": "sk80",
+			"link": "https://youtu.be/yz_lw2VCrr0",
+			"percent": 100,
+			"hz": 999
 		}
     ]
 }
