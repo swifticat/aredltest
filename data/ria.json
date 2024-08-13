@@ -1,8 +1,8 @@
 {
     "id": 516,
     "name": "riA",
-    "author": "ihazhamburger",
-    "creators": [],
+    "author": "sk80",
+    "creators": ["ihazhamburger"],
     "verifier": "sk80",
     "verification": "Link",
     "percentToQualify": 100,
