@@ -20,5 +20,11 @@
 			"percent": 100,
 			"hz": 999
 		}
+        {
+			"user": "Mathey",
+			"link": "stream",
+			"percent": 100,
+			"hz": 240
+		}
 	]
 }
