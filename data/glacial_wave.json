@@ -7,5 +7,18 @@
     "verification": "https://youtu.be/MZVCJKqTQDQ",
     "percentToQualify": 100,
     "password": "Copyable",
-    "records": []
+    "records": [
+        {
+			"user": "DubbyBall",
+			"link": "https://www.youtube.com/watch?v=D9tg7zlEaXE",
+			"percent": 100,
+			"hz": 240
+		},
+        {
+			"user": "Slopes",
+			"link": "https://youtu.be/oOcQa5DkJCc",
+			"percent": 100,
+			"hz": 240
+		}
+    ]
 }
