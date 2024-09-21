@@ -11,12 +11,24 @@
     {
         "role": "admin",
         "members": [
-            {
-                "name": "GDoof",
-                "link": "https://www.youtube.com/channel/UCDp8z5-vtUg8QJdDM5Yh-tg"
+           {
+                "name": "doom",
+                "link": "https://www.youtube.com/channel/idfk"
             },
-            {
-                "name": "Skylar",
+              {
+                "name": "Dubby",
+                "link": "https://www.youtube.com/channel/idfk"
+            },
+              {
+                "name": "Kubix",
+                "link": "https://www.youtube.com/channel/idfk"
+            },
+              {
+                "name": "waldsmind",
+                "link": "https://www.youtube.com/channel/idfk"
+            },
+              {
+                "name": "yeeee",
                 "link": "https://www.youtube.com/channel/idfk"
             }
         ]
