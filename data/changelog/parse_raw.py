@@ -1,6 +1,7 @@
 import re
 from datetime import datetime
 import json
+import sys
 
 with open('name_map.json', "r", encoding='utf-8') as file:
         try:

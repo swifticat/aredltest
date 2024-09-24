@@ -1,36 +1,34 @@
 [
-    {
-        "role": "owner",
-        "members": [
-            {
-                "name": "Skoe",
-                "link": "https://www.youtube.com/channel/UC4N25ULgPMmeKv5XwgJD5-A"
-            }
-        ]
-    },
-    {
-        "role": "admin",
-        "members": [
-           {
-                "name": "doom",
-                "link": "https://www.youtube.com/channel/idfk"
-            },
-              {
-                "name": "Dubby",
-                "link": "https://www.youtube.com/channel/idfk"
-            },
-              {
-                "name": "Kubix",
-                "link": "https://www.youtube.com/channel/idfk"
-            },
-              {
-                "name": "waldsmind",
-                "link": "https://www.youtube.com/channel/idfk"
-            },
-              {
-                "name": "yeeee",
-                "link": "https://www.youtube.com/channel/idfk"
-            }
-        ]
-    }
+	{
+		"role": "owner",
+		"members": [
+			{
+				"name": "Skoe",
+				"link": "https://www.youtube.com/channel/UC4N25ULgPMmeKv5XwgJD5-A"
+			}
+		]
+	},
+	{
+		"role": "admin",
+		"members": [
+			{
+				"name": "doom",
+				"link": "https://www.youtube.com/@igndoom651"
+			},
+			{
+				"name": "Dubby",
+				"link": "https://www.youtube.com/@DubbyBall"
+			},
+			  {
+				"name": "Kubix",
+				"link": "https://www.youtube.com/@kubixgd648"
+			},
+			  {
+				"name": "waldsmind"
+			},
+			  {
+				"name": "yeeee"
+			}
+		]
+	}
 ]
