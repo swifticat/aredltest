@@ -13,6 +13,12 @@
 			"link": "https://www.youtube.com/watch?v=TABlikgASF0&t=31s",
 			"percent": 100,
 			"hz": 240
+		},
+        {
+			"user": "GreenCat",
+			"link": "https://www.youtube.com/watch?v=H8ZEBIOR8k0&ab_channel=Damnned",
+			"percent": 100,
+			"hz": 240
 		}
     ]
 }
