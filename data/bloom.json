@@ -7,5 +7,12 @@
     "verification": "https://youtu.be/eKf7WAQJ9Zc",
     "percentToQualify": 64,
     "password": "Copyable",
-    "records": []
+    "records": [
+        {
+			"user": "SpaceLV",
+			"link": "https://www.youtube.com/watch?v=Vj4akl2rGko&ab_channel=KosmosLV",
+			"percent": 100,
+			"hz": 240
+		}
+    ]
 }
