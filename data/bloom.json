@@ -13,6 +13,11 @@
 			"link": "https://www.youtube.com/watch?v=Vj4akl2rGko&ab_channel=KosmosLV",
 			"percent": 100,
 			"hz": 240
-		}
+		},
+        {
+			"user": "doom",
+			"link": "https://youtu.be/9IHb2WkhCA4",
+			"percent": 100,
+			"hz": 240
     ]
 }
