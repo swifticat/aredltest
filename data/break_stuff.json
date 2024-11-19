@@ -7,5 +7,12 @@
     "verification": "https://youtu.be/ZzunJZYRjPo",
     "percentToQualify": 100,
     "password": "Copyable",
-    "records": []
+    "records": [
+		{
+			"user": "doom",
+			"link": "https://youtu.be/Ngv_wyb-aPw",
+			"percent": 100,
+			"hz": 999
+		}
+	]
 }
