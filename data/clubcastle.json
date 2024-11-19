@@ -3,16 +3,9 @@
     "name": "Clubcastle",
     "author": "SkoesAlt",
     "creators": ["Ice"],
-    "verifier": "Ice",
-    "verification": "nonelmfaofirstvictorgetsit",
+    "verifier": "Skoe",
+    "verification": "https://youtu.be/1ulqwp0fW7E",
     "percentToQualify": 100,
     "password": "Copyable",
-    "records": [
-         {
-			"user": "Skoe",
-			"link": "https://youtu.be/1ulqwp0fW7E",
-			"percent": 100,
-			"hz": 240
-		}
-    ]
+    "records": []
 }
