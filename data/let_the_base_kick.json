@@ -7,5 +7,12 @@
     "verification": "https://youtu.be/k_yQucpdGZc",
     "percentToQualify": 100,
     "password": "Copyable",
-    "records": []
+    "records": [
+               {
+			"user": "Furrious",
+			"link": "https://www.youtube.com/watch?v=nqW-Y8pUvz8&ab_channel=Furrious%5BGD%5D",
+			"percent": 100,
+			"hz": 240
+		}
+	]
 }
