@@ -19,6 +19,12 @@
 			"link": "https://youtu.be/dtDlpLeB2os",
 			"percent": 100,
 			"hz": 240
-        }
+        },
+        {
+			"user": "probablyAleksandra",
+			"link": "goonworld.mp4",
+			"percent": 100,
+			"hz": 360
+		}
     ]
 }
