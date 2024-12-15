@@ -12,25 +12,30 @@
 		"role": "admin",
 		"members": [
 			{
-				"name": "doom",
-				"link": "https://www.youtube.com/@igndoom651"
-			},
-			{
-				"name": "Dubby",
-				"link": "https://www.youtube.com/@DubbyBall"
+				"name": "Bal",
+				"link": "https://www.youtube.com/noclue"
 			},
 			  {
 				"name": "Kubix",
 				"link": "https://www.youtube.com/@kubixgd648"
 			},
 			  {
-				"name": "waldsmind"
+				"name": "Skylar"
 			},
 			  {
 				"name": "Furrious"
 			},
              {
 				"name": "mathey"
+			}
+		]
+	},
+    {
+		"role": "dev",
+		"members": [
+            {
+				"name": "doom",
+				"link": "https://www.youtube.com/@igndoom"
 			}
 		]
 	}
