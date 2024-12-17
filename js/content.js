@@ -1,4 +1,4 @@
-import { round, calculateScores } from "./score.js";
+import { round, calculateScores, score } from "./score.js";
 
 /**
  * Path to directory containing `_list.json` and all levels
@@ -123,7 +123,7 @@ export async function fetchLeaderboard() {
                 rank: rank + 1,
                 level: level.name,
                 percent: record.percent,
-                score: scoreLookup[rank],
+                score: score(rank + 1, record.percent, level.percentToQualify, list.length),
                 link: record.link,
                 path: level.path,
             });

@@ -13,21 +13,27 @@ const scale = 1;
  * @param {Number} rank Position on the list
  * @param {Number} percent Percentage of completion
  * @param {Number} minPercent Minimum percentage required
- * @Param {Number} levelCount Current number of levels
+ * @param {Number} levelCount Current number of levels
  * @returns {Number}
  */
 export function score(rank, percent, minPercent, levelCount) {
     const b = (levelCount - 1) * baseFactor
     const a = 600 * Math.sqrt(b)
+	// console.log(b)
+	// console.log(a)
+
 
     let score = (a / Math.sqrt((rank - 1) / 50 + b) - 100) *
         ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
 
+	// console.log((a / Math.sqrt((rank - 1) / 50 + b) - 100))
+	// console.log(((percent - (minPercent - 1)) / (100 - (minPercent - 1))))
+	// console.log(score)
     score = Math.max(0, score);
 
-    if (percent != 100) {
-        return round(score - score / 3);
-    }
+    // if (percent != 100) {
+    //     return round(score - score / 3);
+    // }
 
     return round(score);
 }
