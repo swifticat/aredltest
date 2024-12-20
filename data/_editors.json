@@ -12,12 +12,16 @@
 		"role": "admin",
 		"members": [
 			{
-				"name": "Bal",
+				"name": "bal",
 				"link": "https://www.youtube.com/noclue"
 			},
 			  {
 				"name": "Kubix",
 				"link": "https://www.youtube.com/@kubixgd648"
+			},
+            {
+				"name": "Aquatic",
+				"link": "https://www.youtube.com/willaddlater"
 			},
 			  {
 				"name": "Skylar"
