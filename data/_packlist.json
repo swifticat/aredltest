@@ -2,18 +2,13 @@
     {
         "name": "Legacy Pack",
         "levels": [
-            "the_hallucination",
-            "maybe_possibly_thingy",
-            "the_wave_lair",
-            "deathclub",
-            "arrival",
-            "duala",
-            "fear_factory",
-            "asymmetrical_rush",
-            "not_clubstep",
-            "ria",
-            "uranium_circles",
-            "death_jumper"
+            "memory_delusions",
+            "unused_objects",
+            "hot_road",
+            "my_brain_is_fried",
+            "blackout",
+            "xan_circles",
+            "ice_water_the_dont"
         ],
         "colour": "linear-gradient(145deg, rgba(154,158,173,1) 0%, rgba(115,120,140,1) 50%, rgba(82,86,105,1) 100%)"
     }
