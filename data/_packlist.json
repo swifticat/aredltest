@@ -2,6 +2,8 @@
     {
         "name": "Legacy Pack",
         "levels": [
+            "ghost_castle",
+            "thanatos",
             "memory_delusions",
             "unused_objects",
             "hot_road",
