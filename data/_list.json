@@ -3,6 +3,7 @@
     "disconnect",
     "cauli",
     "mute",
+    "chroma_machine",
     "bloom",
     "confuse_me",
     "carmine_clutter",
@@ -21,6 +22,7 @@
     "homeswitcher",
     "nightfall",
     "overheat_construct",
+    "glisten19",
     "mathey_level",
     "mayday",
     "silent_machine",
@@ -51,7 +53,5 @@
     "cryon",
     "new_ping_rates",
     "demories",
-    "let_the_base_kick",
-    "ghost_castle",
-    "thanatos"
+    "let_the_base_kick"
 ]
