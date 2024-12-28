@@ -25,6 +25,12 @@
 			"link": "https://youtu.be/EBj3BJnIkrE",
 			"percent": 100,
 			"hz": 240
+		},
+        {
+            "user": "Rae",
+			"link": "https://www.youtube.com/watch?v=sGKASSeQV90&ab_channel=Rae",
+			"percent": 100,
+			"hz": 360
 		}
     ]
 }
