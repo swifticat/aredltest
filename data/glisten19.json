@@ -13,6 +13,12 @@
 			"link": "https://youtu.be/7-uFwFoUIxk",
 			"percent": 100,
 			"hz": 180
+		 },
+         {
+			"user": "doom",
+			"link": "https://youtu.be/fuGSvwtKPXs",
+			"percent": 100,
+			"hz": 240
 		}
-	]
+    ]
 }
