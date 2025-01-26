@@ -2,6 +2,7 @@
     {
         "name": "Legacy Pack",
         "levels": [
+            "invisible_witburst",
             "the_hallucination",
             "cryon",
             "new_ping_rates",
