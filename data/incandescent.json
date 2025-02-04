@@ -7,5 +7,12 @@
     "verification": "https://youtu.be/Kev-ITexzrM",
     "percentToQualify": 100,
     "password": "Copyable",
-    "records": []
+    "records": [
+        {
+			"user": "syrcx",
+			"link": "https://www.youtube.com/watch?v=8Ix7VFXdQfI",
+			"percent": 100,
+			"hz": 240
+		}
+    ]
 }
