@@ -19,6 +19,12 @@
 			"link": "https://www.youtube.com/watch?v=H8ZEBIOR8k0&ab_channel=Damnned",
 			"percent": 100,
 			"hz": 240
+		},
+        {
+			"user": "syrcx",
+			"link": "https://youtu.be/CV-ElbTI-ZM",
+			"percent": 100,
+			"hz": 240
 		}
     ]
 }
