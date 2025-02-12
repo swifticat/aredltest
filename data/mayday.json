@@ -25,6 +25,12 @@
 			"link": "https://www.youtube.com/watch?v=SxuQvfIkOe8",
 			"percent": 100,
 			"hz": 144
+		},
+        {
+			"user": "Krieger",
+			"link": "https://youtu.be/tK9VnDIcmk0?si=jvPo84OQ766YrlCJ",
+			"percent": 100,
+			"hz": 60
 		}
     ]
 }
