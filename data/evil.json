@@ -1,4 +1,4 @@
-{
+l{
     "id": 1219,
     "name": "Evil",
     "author": "Rae",
@@ -9,10 +9,10 @@
     "password": "Copyable",
     "records": [
         {
-			"user": "Rae",
-			"link": "https://www.youtube.com/watch?v=BMJQgsH81v8",
+			"user": "evil",
+			"link": "https://www.youtube.com/watch?v=xjU0PaonPoQ",
 			"percent": 100,
-			"hz": 360
+			"hz": 240
 		},
         {
 			"user": "doom",
