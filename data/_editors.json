@@ -24,10 +24,6 @@
               {
 				"name": "R3SERT1"
 			},
-             {
-				"name": "mathey",
-                "link": "https://www.youtube.com/@whoismathey"
-			},
                           {
 				"name": "kal"
 			},
@@ -68,6 +64,9 @@
 		"members": [
                          {
 				"name": "Kubix"
+			},
+              {
+				"name": "mathey"
 			}
             }       
 ]
