@@ -8,6 +8,17 @@
 			}
 		]
 	},
+      {
+    "role": "admin",
+		"members": [
+                         {
+				"name": "Kubix"
+			},
+              {
+				"name": "mathey"
+			}
+        ]
+	 },
 	{
 		"role": "mod",
 		"members": [
@@ -58,16 +69,4 @@
 				"link": "https://www.youtube.com/@igndoom"
 			}
 		]
-	},
-    {
-    "role": "admin",
-		"members": [
-                         {
-				"name": "Kubix"
-			},
-              {
-				"name": "mathey"
-			}
-        ]
-	 }
-]
+	}
