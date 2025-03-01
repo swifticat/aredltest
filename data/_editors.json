@@ -9,15 +9,11 @@
 		]
 	},
 	{
-		"role": "admin",
+		"role": "mod",
 		"members": [
 			{
 				"name": "bal",
 				"link": "https://www.youtube.com/noclue"
-			},
-			  {
-				"name": "Kubix",
-				"link": "https://www.youtube.com/@kubixgd648"
 			},
 			  {
 				"name": "Skylar"
@@ -67,4 +63,10 @@
 			}
 		]
 	}
+    {
+    "role": "admin",
+		"members": [
+                         {
+				"name": "Kubix"
+			}
 ]
