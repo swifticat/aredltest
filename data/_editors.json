@@ -20,7 +20,7 @@
         ]
 	 },
 	{
-		"role": "mod",
+		"role": "helper",
 		"members": [
 			{
 				"name": "bal",
