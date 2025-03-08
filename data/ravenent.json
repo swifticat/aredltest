@@ -7,5 +7,12 @@
     "verification": "https://youtu.be/5vMm9cpD598",
     "percentToQualify": 100,
     "password": "Copyable",
-    "records": []
+    "records": [
+        	{
+		   "user": "Filipogem",
+		   "link": "https://youtu.be/7L_foUEOJtY",
+		   "percent": 100,
+		   "hz": 240
+	   }
+   ]
 }
