@@ -13,6 +13,12 @@
 			"link": "https://www.youtube.com/watch?v=hPjjqaD6TXI",
 			"percent": 100,
 			"hz": 144
+		},
+        {
+			"user": "gamecheese",
+			"link": "https://youtu.be/caXw5axCFpw?si=Uc4EdNZxaE-N0Cwn",
+			"percent": 100,
+			"hz": 60
 		}
     ]
 }
