@@ -48,5 +48,14 @@
             "death_jumper_plus"
         ],
         "colour": "linear-gradient(145deg, rgba(173,154,154,1) 0%, rgba(140,115,115,1) 50%, rgba(105,82,82,1) 100%)"
+    },
+     {
+        "name": "G BACK TO BACK TO BACK",
+        "levels": [
+            "glisten19",
+            "glissade",
+            "grateful"
+        ],
+        "colour": "linear-gradient(32deg, rgba(222,69,145,1) 0%, rgba(235,94,164,1) 50%, rgba(237,147,192,1) 100%)"
     }
 ]
