@@ -1,27 +1,5 @@
 [
-    {
-        "name": "Legacy Pack",
-        "levels": [
-            "cleansed_in_ice",
-            "invisible_witburst",
-            "the_hallucination",
-            "cryon",
-            "new_ping_rates",
-            "demories",
-            "let_the_base_kick",
-            "ghost_castle",
-            "thanatos",
-            "memory_delusions",
-            "unused_objects",
-            "hot_road",
-            "my_brain_is_fried",
-            "blackout",
-            "xan_circles",
-            "ice_water_the_dont",
-            "outlaw"
-        ],
-        "colour": "linear-gradient(145deg, rgba(154,158,173,1) 0%, rgba(115,120,140,1) 50%, rgba(82,86,105,1) 100%)"
-    },
+    }
        {
         "name": "GLOBAL DEMONLIST",
         "levels": [
@@ -115,6 +93,29 @@
         ],
         "colour": "linear-gradient(34deg, rgba(224, 115, 115, 1) 0%, rgba(249, 198, 198, 1) 50%, rgba(140, 74, 74, 1) 100%)"
        },
+      {
+        "name": "Legacy Pack",
+        "levels": [
+            "cleansed_in_ice",
+            "invisible_witburst",
+            "the_hallucination",
+            "cryon",
+            "new_ping_rates",
+            "demories",
+            "let_the_base_kick",
+            "ghost_castle",
+            "thanatos",
+            "memory_delusions",
+            "unused_objects",
+            "hot_road",
+            "my_brain_is_fried",
+            "blackout",
+            "xan_circles",
+            "ice_water_the_dont",
+            "outlaw"
+        ],
+        "colour": "linear-gradient(145deg, rgba(154,158,173,1) 0%, rgba(115,120,140,1) 50%, rgba(82,86,105,1) 100%)"
+    },
     {
         "name": "Medium Pack I",
         "levels": [
