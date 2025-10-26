@@ -163,7 +163,7 @@ input[type="text"],
 input[type="number"],
 input[type="url"],
 textarea,
-select, option, button,
+select, option, button, 
 .type-label-lg {
     font-family: "Lexend Deca", sans-serif;
     font-size: 17.1428571429px;
