@@ -3,8 +3,9 @@
     --color-on-background: black;
     --color-background-hover: #eee;
     --color-on-background-hover: black;
-    --color-primary: #bf2a4d;
+    --color-primary: #000000;
     --color-on-primary: white;
+    --color-primary-disabled: #1f213c;
     --color-error: #de0000;
     --color-on-error: white;
 }
@@ -16,8 +17,7 @@ header.dark {
     --color-on-background: white;
     --color-background-hover: #27262c;
     --color-on-background-hover: white;
-    --color-primary: #bf2a4d;
-    --color-primary-disabled: #1f213c;
+    --color-primary: #000000;
     --color-on-primary: white;
     --color-error: #de0000;
     --color-on-error: white;
@@ -34,49 +34,121 @@ body {
     margin: 0;
 }
 
-header,
-main {
-    background-color: var(--color-background);
-    color: var(--color-on-background);
-    display: grid;
-    grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 2fr) minmax(
-            16em,
-            1fr
-        );
-    column-gap: 2rem;
-}
-
 header {
     display: flex;
-    padding-inline: calc(25vw - 10rem);
-    height: 4rem;
-    background-color: var(--color-primary);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    height: 4.5rem; /* adjusted header height */
+    min-height: 4.5rem;
+    background-color: rgba(0, 0, 0, 0.7);
     color: var(--color-on-primary);
 }
-@media screen and (min-width: 1366px) {
-    header {
-        display: grid;
-        padding-inline: 0;
-    }
-}
+
 header .logo {
-    justify-self: end;
-    align-self: center;
-    display: flex;
-    align-items: flex-end;
-    gap: 1rem;
-}
-header .nav {
-    flex: 1;
+    display: none;
 }
 
+.nav {
+    display: flex;
+    flex: 1;
+    justify-content: center; /* center main buttons */
+    height: 100%;
+    align-items: center;
+}
+
+.nav-buttons {
+    display: flex;
+    height: 100%;
+    gap: 0.3rem;
+}
+
+/* Equal-width main buttons with fade effect */
+.nav-buttons .nav__tab,
+.nav-buttons .nav__cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 13rem; /* consistent width */
+    height: 100%;
+    padding: 0 1.5rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--color-on-primary);
+    border: none;
+    margin: 0;
+    border-radius: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+
+    /* smooth fade-in/out */
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Remove underline everywhere */
+.nav-buttons .nav__tab,
+.nav-buttons .nav__tab span,
+.nav-buttons .nav__cta,
+.nav-buttons .nav__cta span,
+.nav-buttons .nav__tab:link,
+.nav-buttons .nav__tab:visited,
+.nav-buttons .nav__tab:hover,
+.nav-buttons .nav__tab:active,
+.nav-buttons .nav__tab:focus,
+.nav-buttons .nav__cta:link,
+.nav-buttons .nav__cta:visited,
+.nav-buttons .nav__cta:hover,
+.nav-buttons .nav__cta:active,
+.nav-buttons .nav__cta:focus {
+    text-decoration: none !important;
+    outline: none;
+}
+
+/* Hover + active fade effect */
+.nav-buttons .nav__tab:hover,
+.nav-buttons .nav__cta:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.nav-buttons .nav__tab:active,
+.nav-buttons .nav__cta:active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Right utilities (discord & dark mode toggle) */
+.utilities {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    height: 100%;
+    margin-left: 0.5rem; /* shift slightly to the left to center header content */
+}
+
+.nav__icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.25s ease; /* optional fade effect */
+}
+
+.nav__icon img {
+    height: 2rem;
+    width: auto;
+}
+
+/* Main content */
 main {
-    height: 0;
     flex: 1;
     display: grid;
-    grid-template-rows: minmax(0, 1fr);
+    grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 2fr) minmax(16em, 1fr);
     column-gap: 2rem;
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    grid-template-rows: minmax(0, 1fr);
 }
+
 main > div {
     overflow-y: auto;
 }
@@ -95,24 +167,34 @@ input[type="checkbox"] {
     margin: 0;
 }
 
-/* width */
-::-webkit-scrollbar {
-    width: 7px;
-    height: 7px;
-  }
+/* Flag Styling for Leaderboard */
+.country-flag {
+    width: 2rem;
+    height: auto;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    display: inline-block;
+}
 
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
+.user {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
 
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-  }
+.flag-icon {
+    border-radius: 5px;
+    width: 24px;
+    height: 16px;
+    display: inline-block;
+}
 
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
-
+/* Remove underlines globally */
+a,
+a:visited,
+a:hover,
+a:active,
+button {
+    text-decoration: none;
+    outline: none;
+}
