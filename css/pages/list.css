@@ -1,12 +1,21 @@
+.page-list {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* levels left, guidelines right */
+    gap: 2rem;
+    align-items: flex-start;
+}
 
-.page-list .list-container,
-.page-list .level-container,
-.page-list .meta-container {
-    padding-block: 2rem;
-}
 .page-list .list-container {
-    padding-inline: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 2000px;
+    padding: 2rem 1rem;
+    align-items: center;
 }
+
 .page-list .meta-container {
     padding-right: 2rem;
 }
