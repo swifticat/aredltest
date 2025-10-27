@@ -16,6 +16,14 @@
     align-items: center;
 }
 
+.page-list .list-container,
+.page-list .level-container,
+.page-list .meta-container {
+    padding-block: 2rem;
+}
+.page-list .list-container {
+    padding-inline: 1rem;
+}
 .page-list .meta-container {
     padding-right: 2rem;
 }
