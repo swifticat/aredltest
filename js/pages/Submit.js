@@ -125,8 +125,40 @@ export default {
 						'Content-Type': 'application/json',
 					},
 					body: JSON.stringify({
-						content: "its been 20 years",
-						
+						content: this.level.name + " - " + this.holder,
+						embeds: [
+							{
+								title: 'New record submission!',
+								description: 'New record by ' + this.holder + ' on ' + this.level.name + '.',
+								fields: [
+									{
+										name: 'Level',
+										value: this.level.name + ' | ' + this.level.id,
+									},
+									{
+										name: 'Record holder',
+										value: this.holder,
+									},
+									{
+										name: 'Percentage',
+										value: this.percentage,
+									},
+									{
+										name: 'Video',
+										value: this.footage,
+									},
+									{
+										name: 'Raw footage',
+										value: this.rawfootage || "None",
+									},
+									{
+										name: 'Notes',
+										value: this.notes || "None",
+									},
+								],
+							},
+						],
+					
 					}),
 				})
 				.then((response) => {
