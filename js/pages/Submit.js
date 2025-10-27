@@ -125,39 +125,8 @@ export default {
 						'Content-Type': 'application/json',
 					},
 					body: JSON.stringify({
-						content: this.level.name + " - " + this.holder,
-						embeds: [
-							{
-								title: 'New record submission!',
-								description: 'New record by ' + this.holder + ' on ' + this.level.name + '.',
-								fields: [
-									{
-										name: 'Level',
-										value: this.level.name + ' | ' + this.level.id,
-									},
-									{
-										name: 'Record holder',
-										value: this.holder,
-									},
-									{
-										name: 'Percentage',
-										value: this.percentage,
-									},
-									{
-										name: 'Video',
-										value: this.footage,
-									},
-									{
-										name: 'Raw footage',
-										value: this.rawfootage || "None",
-									},
-									{
-										name: 'Notes',
-										value: this.notes || "None",
-									},
-								],
-							},
-						],
+						content: "https://cdn.discordapp.com/attachments/1098958616272310396/1432178771208962048/AQNUIC1GMyCvV35nQtcwWyb2Pik8QCZDZWXj8Byzd7bHD1a0VjrJ0aHwCIeTh6lTdvt6A_O40IqcEg6Ft7rwA95r3GfhlhzwFsOoIDk.mp4?ex=69001beb&is=68feca6b&hm=2d4341cb08173d0be7426e56daf8bcb71b0979db101fafd95297a0dc6a6cf2d3&",
+					
 					
 					}),
 				})
