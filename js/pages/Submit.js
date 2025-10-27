@@ -125,7 +125,7 @@ export default {
 						'Content-Type': 'application/json',
 					},
 					body: JSON.stringify({
-						content: "boi <@784764491748605953> when are we getting github perms ✌️",
+						content: "its been 20 years",
 						
 					}),
 				})
