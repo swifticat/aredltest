@@ -156,6 +156,273 @@
     color: rgb(128, 128, 128);
 }
 
+/* Author text */
+.level-info .author {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 16px;
+    font-style: normal;
+    color: #333333; /* slightly gray black */
+}
+
+.level-info .author .author-name {
+    color: #000000; /* pure black for fetched author */
+    font-weight: 500;
+}
+
+main.dark .level-info .author {
+    color: var(--color-on-primary);
+}
+
+main.dark .level-info .author .author-name {
+    color: var(--color-on-primary);
+}
+
+/* Score text */
+.level-info .score-text {
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin-top: 8px;
+    color: #555555;
+    line-height: 1.3;
+}
+
+.level-info .score-text .score-value {
+    color: #000000;
+    font-weight: 400;
+}
+
+main.dark .level-info .score-text {
+    color: #bbbbbb;
+}
+
+main.dark .level-info .score-text .score-value {
+    color: #ffffff;
+}
+
+/* GUIDELINES BOX */
+.guidelines-box {
+    width: 330px;
+    background-color: rgba(0,0,0,0.15);
+    color: var(--color-on-primary);
+    padding: 1rem;
+    gap: 1rem;
+    transition: background-color 0.2s, box-shadow 0.2s, border 0.2s;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-top: 2rem;
+    position: relative;
+    left: -480px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-clip: padding-box;
+}
+
+main:not(.dark) .guidelines-box {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.05);
+    border: 1px dashed #d9d9d9;
+    overflow: visible;
+}
+
+.guidelines-box h2 {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.guidelines-box hr {
+    border: none;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    margin-bottom: 1rem;
+}
+
+.guidelines-box p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* LEVEL DETAIL BOX */
+.level-detail-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* push stats to bottom */
+    width: 50%; /* narrower to prevent overlapping guidelines */
+    min-height: calc(5 * 90px + 5rem);
+    background-color: rgba(0,0,0,0.15);
+    padding: 1.5rem;
+    gap: 1rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    border-radius: 10px;
+    transition: all 0.2s;
+    margin-bottom: 2rem;
+    font-family: "Lexend Deca", sans-serif;
+    overflow: hidden;
+    background-clip: padding-box;
+}
+
+main:not(.dark) .level-detail-box {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.05);
+    border: 1px dashed #d9d9d9;
+    overflow: visible;
+}
+
+/* Title bigger */
+.level-detail-box h2 {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+/* Embedded YouTube */
+.level-detail-box iframe {
+    width: 100%;
+    aspect-ratio: 16/9; /* maintain 16:9 */
+    border-radius: 4px;
+}
+
+/* Bottom stats */
+.level-detail-box p.stats {
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* LEVEL RECORDS BOX */
+.level-records-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%; /* narrower */
+    background-color: rgba(0,0,0,0.1);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    gap: 0.5rem;
+    font-family: "Lexend Deca", sans-serif;
+    overflow: hidden;
+}
+
+main:not(.dark) .level-records-box {
+    background-color: #f5f5f5;
+    color: #000;
+}
+
+/* Records title */
+.level-records-box p {
+    margin: 0.25rem 0;
+    text-align: center;
+}
+
+/* Record Header Bar */
+.record-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #111; /* black header */
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px 4px 0 0;
+    font-weight: 500;
+    text-align: center;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+/* Ensure header columns center their content */
+.record-header div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Record Rows with striped pattern */
+.record-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 6px 8px;
+    text-align: center;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+/* Light mode stripes */
+main:not(.dark) .record-row.even-row {
+    background-color: #f0f0f0; /* light gray */
+}
+
+main:not(.dark) .record-row.odd-row {
+    background-color: #d9d9d9; /* darker gray */
+}
+
+/* Dark mode stripes (subtle on new panels) */
+main.dark .record-row.even-row {
+    background: rgba(255,255,255,0.02);
+}
+
+main.dark .record-row.odd-row {
+    background: rgba(255,255,255,0.01);
+}
+
+/* Center text in each half */
+.record-row div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.record-row a {
+    color: #00f;
+    text-decoration: underline;
+}
+
+/* Buttons inside level detail box */
+.level-detail-box button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: rgba(0,0,0,0.2);
+    color: var(--color-on-primary);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.2s;
+}
+
+.level-detail-box button:hover {
+    background-color: rgba(0,0,0,0.35);
+}
+
+main:not(.dark) .level-detail-box button {
+    background-color: #ddd;
+    color: #000;
+}
+
+main:not(.dark) .level-detail-box button:hover {
+    background-color: #ccc;
+}
+
+/* Instantly shift guidelines box right by 100px when in detail view */
+.guidelines-box.shifted {
+    transform: translateX(100px);
+    transition: none; /* instant */
+}
+
+.guidelines-box.shifted main {
+    /* no-op, kept for future adjustments */
+}
+
 /* --- Light mode background for List Page --- */
 
 /* Default base for .page-list: no background image by default; use variables */
@@ -238,6 +505,35 @@ html, body {
   overflow-y: auto;
 }
 
+/* Close button for guidelines box (keeps previous look but tuned for dark mode panels) */
+.guidelines-box .close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(255,255,255,0.03);
+    border: none;
+    color: var(--color-on-primary);
+    font-size: 1.2rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    transition: background 0.16s ease;
+}
+
+.guidelines-box .close-btn:hover {
+    background: rgba(255,255,255,0.06);
+}
+
+main:not(.dark) .guidelines-box .close-btn {
+    background: #ddd;
+    color: #000;
+}
+
+main:not(.dark) .guidelines-box .close-btn:hover {
+    background: #ccc;
+}
+
 /* -------------------------------
    Top-3 gradient text (gold/silver/bronze)
    - applies to .title .rank and .title .name
@@ -292,4 +588,8 @@ html, body {
   text-shadow: 0 1px 0 rgba(0,0,0,0.18);
 }
 
-
+/* Note:
+   - The dash " – " between rank and name is plain text in the template and is therefore
+     unaffected by the gradient styles (only the .rank and .name spans are styled).
+   - For best results, you can add :data-rank="rank" to the .level-box in list.js so the CSS
+     targets levels by their actual rank value rather than DOM position. */
