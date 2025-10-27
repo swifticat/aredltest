@@ -156,6 +156,91 @@
     color: rgb(128, 128, 128);
 }
 
+/* LEVEL BOX DEFAULT */
+.level-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.15);
+    color: var(--color-on-primary);
+    padding: 1rem;
+    gap: 1rem;
+    transition: background-color 0.2s, box-shadow 0.2s, border 0.2s;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    overflow: hidden; /* ensure children don't bleed out and corners stay clean */
+    background-clip: padding-box;
+}
+
+.level-box:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* LIGHT MODE OVERRIDES */
+main:not(.dark) .level-box {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.05);
+    border: 1px dashed #d9d9d9;
+    overflow: visible; /* keep previous light-mode behavior */
+}
+
+.thumbnail {
+    flex-shrink: 0;
+    width: 160px;
+    height: 90px;
+    overflow: hidden; /* clip thumbnail to rounded corners */
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Make thumbnail corners align with level-box corners on the left */
+.level-box .thumbnail {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+/* If you later add a thumbnail that needs inner rounding, it'll be clipped by overflow hidden */
+
+/* LEVEL INFO */
+.level-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    min-width: 0;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.level-info .title {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    line-height: 1.4;
+    position: relative;
+    top: 8px;
+}
+
+.level-info .title .rank {
+    font-weight: 700;
+}
+
+.level-info .title .name {
+    font-weight: 500;
+}
+
 /* Author text */
 .level-info .author {
     font-size: 1rem;
