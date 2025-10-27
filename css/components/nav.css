@@ -3,32 +3,55 @@
     --color-on-background: black;
     --color-primary: #000000;
     --color-on-primary: white;
+
+    /* Header & nav (dark mode) */
+    /* pitch black with opacity */
+    --header-dark-base: rgba(0,0,0,0.88);   /* pitch black with opacity */
+    --header-dark-hover: rgba(255, 255, 255, 0.06);
+    --header-dark-hover-strong: rgba(255,255,255,0.08);
+    --header-dark-text: #e9ecef;
 }
 
+/* Navigation container */
 .nav {
     display: flex;
-    column-gap: 2rem;
+    column-gap: 0; /* remove space so buttons touch */
 }
+
+/* Navigation tabs (List, Leaderboard, Roulette, etc.) */
+/* Light-mode default — preserves your previous appearance */
 .nav .nav__tab {
-    padding-top: 4px;
-    border-bottom: 4px solid transparent;
     display: flex;
     align-items: center;
-    padding-inline: 0.5rem;
-    transition: border-color 100ms ease;
+    justify-content: center;
+    padding: 0 1.5rem;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--color-on-primary);
+    border: none !important;
+    border-radius: 0;
+    box-shadow: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.12s ease;
+    text-decoration: none !important;
 }
+
+/* Hover / active states for nav buttons (light mode) */
+.nav .nav__tab:hover,
 .nav .nav__tab.router-link-active {
-    border-color: var(--color-on-primary);
+    background-color: rgba(255, 255, 255, 0.25);
 }
-.nav .nav__tab:hover {
-    border-color: var(--color-on-primary);
-}
+
+/* Actions container (Discord + Dark/Light mode toggle + Submit Record) */
 .nav .nav__actions {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    gap: 0; /* no gap so buttons touch */
 }
+
+/* Icon buttons (Discord + Dark/Light mode) */
 .nav .nav__actions .nav__icon {
     height: 3rem;
     width: 3rem;
@@ -39,23 +62,136 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 100ms ease;
+    transition: background-color 0.2s ease, color 0.12s ease;
 }
-.nav .nav__actions .nav__icon:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
+
 .nav .nav__actions .nav__icon img {
     height: 1.5rem;
+    width: auto;
 }
+
+/* Submit Record button (light-mode default) */
 .nav .nav__actions .nav__cta {
-    margin-left: 1rem;
-    padding: 1rem;
+    margin-left: 0; /* make it touch others */
+    padding: 0 1.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--color-on-primary);
     color: var(--color-primary);
-    border-radius: 0.5rem;
+    border: none;
+    border-radius: 0;
     box-shadow: 0 1px 0.5rem 0 rgba(0, 0, 102, 0.5);
-    transition: transform 100ms ease;
+    transition: background-color 0.2s ease, transform 100ms ease, color 0.12s ease;
+    text-decoration: none !important;
+
+    /* Ensure text fits in one line */
+    white-space: nowrap;
+    min-width: 12rem;
 }
+
 .nav .nav__actions .nav__cta:hover:not(:active) {
+    background-color: rgba(255, 255, 255, 0.85);
     transform: translateY(-2px);
+}
+
+/* ---------------------------
+   Dark-mode unified header (header & buttons SAME base color)
+   ---------------------------
+*/
+
+/* Target header when dark class is present on header OR body OR main */
+header.dark,
+body.dark header,
+main.dark header {
+    background-color: var(--header-dark-base);
+}
+
+/* Keep nav transparent — header provides background */
+header.dark .nav,
+body.dark header .nav,
+main.dark header .nav {
+    background-color: transparent;
+}
+
+/* Nav elements: make them the same as the header background in dark mode */
+header.dark .nav__tab,
+header.dark .nav__icon,
+header.dark .nav__cta,
+body.dark header .nav__tab,
+body.dark header .nav__icon,
+body.dark header .nav__cta,
+main.dark header .nav__tab,
+main.dark header .nav__icon,
+main.dark header .nav__cta {
+    background-color: var(--header-dark-base);
+    color: var(--header-dark-text);
+    border: none !important;
+    box-shadow: none;
+    transition: background-color 0.22s ease, color 0.12s ease;
+}
+
+/* Hover effect: lighten to the hover color (same behavior for header & buttons) */
+header.dark .nav__tab:hover,
+header.dark .nav__icon:hover,
+header.dark .nav__cta:hover,
+body.dark header .nav__tab:hover,
+body.dark header .nav__icon:hover,
+body.dark header .nav__cta:hover,
+main.dark header .nav__tab:hover,
+main.dark header .nav__icon:hover,
+main.dark header .nav__cta:hover {
+    background-color: var(--header-dark-hover);
+    color: var(--header-dark-text);
+}
+
+/* Stronger hover/active for selected tab */
+header.dark .nav__tab.router-link-active,
+body.dark header .nav__tab.router-link-active,
+main.dark header .nav__tab.router-link-active {
+    background-color: var(--header-dark-hover-strong);
+    color: var(--header-dark-text);
+}
+
+/* Submit CTA in dark mode should match header/buttons. Keep hover lift but with the same hover tone */
+header.dark .nav__actions .nav__cta,
+body.dark header .nav__actions .nav__cta,
+main.dark header .nav__actions .nav__cta {
+    background-color: var(--header-dark-base);
+    color: var(--header-dark-text);
+    box-shadow: none;
+    transform: none;
+}
+
+header.dark .nav__actions .nav__cta:hover:not(:active),
+body.dark header .nav__actions .nav__cta:hover:not(:active),
+main.dark header .nav__actions .nav__cta:hover:not(:active) {
+    background-color: var(--header-dark-hover);
+    transform: translateY(-2px);
+}
+
+/* ---------------------------
+   EXCEPTION: remove hover/fade effect for Discord link + theme toggle (utilities area)
+   (these icons stay static on hover)
+   ---------------------------
+*/
+header.dark .utilities .nav__icon,
+body.dark header .utilities .nav__icon,
+main.dark header .utilities .nav__icon {
+    background-color: var(--header-dark-base);
+    color: var(--header-dark-text);
+    transition: none;
+}
+
+header.dark .utilities .nav__icon:hover,
+body.dark header .utilities .nav__icon:hover,
+main.dark header .utilities .nav__icon:hover {
+    background-color: var(--header-dark-base);
+    color: var(--header-dark-text);
+}
+
+/* Keep the light-mode icon tweak for header:not(.dark) so icons remain dark in light mode */
+header:not(.dark) .nav__icon img {
+    filter: brightness(0) saturate(100%);
 }
