@@ -1,297 +1,238 @@
-import { store } from '../main.js';
-import { fetchList } from '../content.js';
-import { rankLabel, score } from '../score.js';
+import { store } from "../main.js";
+import { embed, getFontColour } from "../util.js";
+import { score } from "../score.js";
+import { fetchEditors, fetchSupporters, fetchList } from "../content.js";
+
+import Spinner from "../components/Spinner.js";
+import LevelAuthors from "../components/List/LevelAuthors.js";
+
+const roleIconMap = {
+    owner: "owner",
+    coowner: "crown",
+    admin: "user-gear",
+    helper: "user-shield",
+    dev: "code",
+    trial: "user-lock",
+    patreon: "patreon",
+};
 
 export default {
+    components: { Spinner, LevelAuthors },
+    template: /*html*/`
+        <main v-if="loading">
+            <Spinner></Spinner>
+        </main>
+        <main v-else class="page-list">
+            <div class="list-container">
+                <table class="list" v-if="list">
+                    <tr v-for="([level, err], i) in list">
+                        <td class="rank">
+                            <p v-if="i + 1 <= 100" class="type-label-lg">#{{ i + 1 }}</p>
+                            <p v-else class="type-label-lg">Legacy</p>
+                        </td>
+                        <td class="level" :class="{ 'active': selected == i, 'error': !level }">
+                            <button @click="selected = i">
+                                <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="level-container">
+                <div class="level" v-if="level">
+                    <h1>{{ level.name }}</h1>
+                    <LevelAuthors :author="level.author" :creators="level.creators" :verifier="level.verifier"></LevelAuthors>
+                    <div class="packs" v-if="level.packs.length > 0">
+                        <div v-for="pack in level.packs" class="tag" :style="{background:pack.colour}">
+                            <p>{{pack.name}}</p>
+                        </div>
+                    </div>
+                    <iframe class="video" :src="embed(level.verification)" frameborder="0"></iframe>
+                    <ul class="stats">
+                        <li>
+                            <div class="type-title-sm">Points when completed</div>
+                            <p>{{ score(selected + 1, 100, level.percentToQualify, list.length) }}</p>
+                        </li>
+                        <li>
+                            <div class="type-title-sm">ID</div>
+                            <p>{{ level.id }}</p>
+                        </li>
+                        <li>
+                            <div class="type-title-sm">Password</div>
+                            <p>{{ level.password || 'Free to Copy' }}</p>
+                        </li>
+                    </ul>
+                    <h2>Records</h2>
+                    <p v-if="selected + 1 <= 25"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
+                    <p v-else>100% or better to qualify</p>
+                    <table class="records">
+                        <tr v-for="record in level.records" class="record">
+                            <td class="percent">
+                                <p>{{ record.percent }}%</p>
+                            </td>
+                            <td class="user">
+                                <a :href="record.link" target="_blank" class="type-label-lg">{{ record.user }}</a>
+                            </td>
+                            <td class="mobile">
+                                <img v-if="record.mobile" :src="\`/assets/phone-landscape\${store.dark ? '-dark' : ''}.svg\`" alt="Mobile">
+                            </td>
+                            <td class="hz">
+                                <p>{{ record.hz }}Hz</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div v-else class="level" style="height: 100%; justify-content: center; align-items: center;">
+                    <p>(ノಠ益ಠ)ノ彡┻━┻</p>
+                </div>
+            </div>
+            <div class="meta-container">
+                <div class="meta">
+                    <div class="errors" v-show="errors.length > 0">
+                        <p class="error" v-for="error of errors">{{ error }}</p>
+                    </div>
+                    <div class="og">
+                        <p class="type-label-md">Original List by <a href="https://tsl.pages.dev/#/" target="_blank">TheShittyList</a></p>
+                    </div>
+                    <template v-if="editors">
+                        <h3 align="center">List Editors</h3>
+                        <ol class="editors">
+                            <ol class="rank" v-for="rank in editors">
+                                <li v-for="member in rank.members">
+                                    <img :src="\`/assets/\${roleIconMap[rank.role]}\${store.dark ? '-dark' : ''}.svg\`" :alt="rank.role">
+                                    <a v-if="member.link" class="type-label-lg link" target="_blank" :href="member.link">{{ member.name }}</a>
+                                    <p v-else>{{ member.name }}</p>
+                                </li>
+                            </ol>
+                        </ol>
+                        <h3 align="center">Supporters</h3>
+                        <ol class="editors">
+                            <ol class="rank" v-for="rank in supporters">
+                                <li v-for="member in rank.members">
+                                    <img :src="\`/assets/\${roleIconMap[rank.role]}\${store.dark ? '-dark' : ''}.svg\`" :alt="rank.role">
+                                    <a v-if="member.link" class="type-label-lg link" target="_blank" :href="member.link">{{ member.name }}</a>
+                                    <p v-else>{{ member.name }}</p>
+                                </li>
+                            </ol>
+                        </ol>
+                    </template>
+                     <h3>> How to Submit Records</h3>
+                    <p>
+                        Join our discord server, go to list request channel. Then post your video of completing the level with your placement opinion and attempt count.
+                    </p>
+                    <h3>> Submission Requirements</h3>
+                    <p>
+                        When submitting your record, please ensure that it complies with the following guidelines:
+                    </p>
+                    <p>
+                        - Your recording is a complete playthrough of the level from 0-100 without any cuts (if there are cuts in your video, please include an uncut raw footage)
+                    </p>
+                     <p>
+                        - Your completion needs to have clicks. If it doesn't (or if it only does for a part of the level, and not the entire run), you have to provide a raw footage with clicks. If you don't, your record will be rejected. Mobile players are NOT exempt from this rule, recorded taps are required.  
+                    </p>
+                    <p>
+                    - Your completion must contain at least a second of a previous attempt, including the death. If the completion does not comply, it will be denied and you will be asked to provide raw footage. If the record was achieved on the first attempt it is exempt from this rule.
+                </p>
+                    <p>
+                        - Achieved the record on the level that is listed on the site (or an approved LDM of it) - please check the level ID before you submit a record
+                    </p>
+                    <p>
+                        - The record has been achieved without using a secret way or a bugged route
+                    </p>
+                    <p>
+                        - The geode Click Between Frames mod is allowed, but please tell us that you are using it.
+                    </p>
+                    <p>
+                        - End stats (The whole box must appear for at least one frame)
+                    </p>
+                    <p>
+                        - FPS/TPS counter is required on 2.1 GDPS up to 360 fps/tps
+                    </p>
+                    <p>
+                        - Using physics bypass on any level in 2.2 is not allowed, and will get your record rejected
+                    </p>
+                    <p>
+                        - Using the 2.1 GDPS is allowed for levels verified in 2.1, up to 360 FPS/TPS
+                    </p>
+                    <p>
+                        - Raw footage (or a pointercrate record of the level) AND clicks will ALWAYS be required for levels in the top 20.
+                    </p>
+                    <p>
+                        - You always need handcam for every level that is listed as "(Solo)" on the list.
+                    </p>
+                    <p>
+                        - Refer to <a href="https://docs.google.com/spreadsheets/d/10AjUUcTpAzOqdfnbz0wtYskL9TdwT4Onv_Fldt5NXBg/edit?usp=sharing">-This Sheet-</a> for a list of allowed and disallowed hacks
+                    </p>
+                    <h3>> Why was my record denied?</h3>
+                    <p>
+                        If your record was denied, please check the following:
+                    </p>
+                    <p>
+                        Does the video meet the requirements? (Above)
+                    </p>
+                    <p>
+                        Is the level placed on the list? (#pending-changes)
+                    </p>
+                    <p>
+                        Was the submission command filled out correctly?
+                    </p>
+                    <p>
+                        Was the record submitted with several links?
+                    </p>
+                    <p>
+                        Note: You will be pinged in #records with the reason why your record was denied. If you are still unsure of why it was denied, or if the record was wrongfully denied, please make a post in #support or DM any list staff on Discord
+                    </p>
+                </div>
+            </div>
+        </main>
+    `,
     data: () => ({
         list: [],
+        editors: [],
+        supporters: [],
         loading: true,
+        selected: 0,
+        errors: [],
+        roleIconMap,
         store,
-        selectedLevel: null, // Track which level is clicked
-        showGuidelines: true, // Track visibility of guidelines box
     }),
+    computed: {
+        level() {
+            return this.list[this.selected][0];
+        },
+    },
     async mounted() {
         this.list = await fetchList();
+        this.editors = await fetchEditors();
+        this.supporters = await fetchSupporters();
+
+        // Error handling
+        if (!this.list) {
+            this.errors = [
+                "Failed to load list. Retry in a few minutes or notify list staff.",
+            ];
+        } else {
+            this.errors.push(
+                ...this.list
+                    .filter(([_, err]) => err)
+                    .map(([_, err]) => {
+                        return `Failed to load level. (${err}.json)`;
+                    })
+            );
+            if (!this.editors) {
+                this.errors.push("Failed to load list editors.");
+            }
+            if (!this.supporters) {
+                this.errors.push("Failed to load supporters.");
+            }
+        }
+
+        // Hide loading spinner
         this.loading = false;
     },
     methods: {
-        extractYouTubeID(url) {
-            if (!url) return '';
-            try {
-                const u = new URL(url);
-                if (u.hostname.includes('youtu.be')) return u.pathname.slice(1);
-                if (u.hostname.includes('youtube.com')) return u.searchParams.get('v');
-            } catch (e) {
-                // If the user passed a plain id instead of a URL, return it directly
-                if (typeof url === 'string' && url.trim().length > 0) return url.trim();
-                return '';
-            }
-            return '';
-        },
-
-        /**
-         * Return an array of thumbnail URLs in descending preference for YouTube.
-         */
-        getYouTubeThumbs(verificationUrl) {
-            const id = this.extractYouTubeID(verificationUrl);
-            if (!id) return [];
-            const base = `https://img.youtube.com/vi/${id}`;
-            return [
-                `${base}/maxresdefault.jpg`,
-                `${base}/sddefault.jpg`,
-                `${base}/hqdefault.jpg`,
-                `${base}/mqdefault.jpg`,
-                `${base}/0.jpg`,
-            ];
-        },
-
-        /**
-         * Called when an <img> for YouTube fails to load (404 etc).
-         * Attempts the next fallback URL (if any), otherwise uses default image.
-         */
-        thumbError(e) {
-            const el = e.target;
-            if (!el) return;
-            const fallbacks = (el.dataset.fallbacks || '').split(',').map(s => s.trim()).filter(Boolean);
-            const attempted = parseInt(el.dataset.attempt || '0', 10);
-
-            if (attempted < fallbacks.length) {
-                const next = fallbacks[attempted];
-                el.dataset.attempt = String(attempted + 1);
-                el.src = next;
-                return;
-            }
-
-            // no fallbacks left -> set site default and remove handlers
-            el.onerror = null;
-            el.onload = null;
-            el.src = '/assets/default-thumbnail.png';
-        },
-
-        /**
-         * Called when an <img> successfully loads.
-         * Detects low-res placeholder images by naturalWidth and tries next fallback if necessary.
-         */
-        thumbLoad(e) {
-            const el = e.target;
-            if (!el) return;
-
-            const attempted = parseInt(el.dataset.attempt || '0', 10);
-            const fallbacks = (el.dataset.fallbacks || '').split(',').map(s => s.trim()).filter(Boolean);
-
-            const NATURAL_WIDTH_THRESHOLD = 300;
-            const naturalWidth = el.naturalWidth || 0;
-
-            if ((naturalWidth > 0 && naturalWidth < NATURAL_WIDTH_THRESHOLD) && attempted < fallbacks.length) {
-                const next = fallbacks[attempted];
-                el.dataset.attempt = String(attempted + 1);
-                el.src = next;
-                return;
-            }
-
-            if (naturalWidth > 0 && naturalWidth < NATURAL_WIDTH_THRESHOLD && attempted >= fallbacks.length) {
-                el.onerror = null;
-                el.onload = null;
-                el.src = '/assets/default-thumbnail.png';
-            }
-        },
-
-        /**
-         * Simple handler for custom asset thumbnails (from /assets).
-         * If the asset fails to load, fall back to default thumbnail.
-         */
-        assetThumbError(e) {
-            const el = e.target;
-            if (!el) return;
-            el.onerror = null;
-            el.src = '/assets/default-thumbnail.png';
-        },
-
-        rankLabel,
-        calcScore(level, percent = 100) {
-            if (!level.rank) return null;
-            const lenlist = this.list.filter(x => x[1] !== null).length;
-            return score(level.rank, percent, level.percentToQualify, lenlist);
-        },
-        formatScoreText(level) {
-            const baseScore = this.calcScore(level, 100);
-            if (baseScore === null) return '';
-            if (level.percentToQualify === 100) return `${baseScore.toFixed(2)} points`;
-            const reqScore = this.calcScore(level, level.percentToQualify);
-            return `${reqScore.toFixed(2)} (${level.percentToQualify}%) — ${baseScore.toFixed(2)} (100%) points`;
-        },
-        selectLevel(level) {
-            this.selectedLevel = level;
-        },
-        deselectLevel() {
-            this.selectedLevel = null;
-        },
-        closeGuidelines() {
-            this.showGuidelines = false;
-        },
+        embed,
+        score,
+        getFontColour,
     },
-    template: `
-        <main v-if="loading">
-            <p style="text-align:center; margin-top: 2rem;">Loading...</p>
-        </main>
-
-        <main v-else class="page-list">
-            <!-- Level List -->
-            <div v-if="!selectedLevel" class="list-container">
-                <div
-                    class="level-box"
-                    v-for="([err, rank, level], i) in list"
-                    :key="level.id"
-                    :data-rank="rank"
-                    @click="selectLevel(level)"
-                    style="cursor:pointer"
-                >
-                    <div class="thumbnail">
-                        <!-- If level.thumbnail is provided, use it (asset path). Wrap in link if verification exists -->
-                        <template v-if="level.thumbnail">
-                            <a 
-                                v-if="level.verification"
-                                :href="level.verification"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <img
-                                    :src="\`/assets/\${level.thumbnail}\`"
-                                    loading="lazy"
-                                    :alt="\`Thumbnail for \${level.name}\`"
-                                    @error="assetThumbError"
-                                />
-                            </a>
-                            <img
-                                v-else
-                                :src="\`/assets/\${level.thumbnail}\`"
-                                loading="lazy"
-                                :alt="\`Thumbnail for \${level.name}\`"
-                                @error="assetThumbError"
-                            />
-                        </template>
-
-                        <!-- Otherwise try YouTube thumbnails with progressive fallback/placeholder detection -->
-                        <template v-else-if="level.verification">
-                            <a 
-                                :href="level.verification" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                            >
-                                <img
-                                    :src="getYouTubeThumbs(level.verification)[0]"
-                                    :data-fallbacks="getYouTubeThumbs(level.verification).slice(1).join(',')"
-                                    :data-attempt="0"
-                                    @error="thumbError"
-                                    @load="thumbLoad"
-                                    loading="lazy"
-                                    :alt="\`Verification video thumbnail for \${level.name}\`"
-                                />
-                            </a>
-                        </template>
-
-                        <!-- final fallback -->
-                        <img
-                            v-else
-                            src="/assets/default-thumbnail.png"
-                            :alt="\`Default thumbnail for \${level.name}\`"
-                            loading="lazy"
-                        />
-                    </div>
-                    <div class="level-info">
-                        <p class="title">
-                            <span class="rank">{{ rankLabel(rank) }}</span> –
-                            <span class="name">{{ level.name }}</span>
-                        </p>
-                        <p class="author">
-                            Published by <span class="author-name">{{ level.author }}</span>
-                        </p>
-                        <p class="score-text">
-                            {{ formatScoreText(level) }}
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Level Detail View -->
-            <div v-else class="list-container">
-                <!-- Box 1: Level Info -->
-                <div class="level-detail-box">
-                    <h2 style="text-align:center">{{ selectedLevel.name }}</h2>
-                    <p style="text-align:center; font-size:0.9rem;">
-                        by {{ selectedLevel.author }}, verified by {{ selectedLevel.verifier }}
-                    </p>
-                    <iframe
-                        v-if="selectedLevel.verification"
-                        width="100%"
-                        height="50%"
-                        :src="\`https://www.youtube.com/embed/\${extractYouTubeID(selectedLevel.verification)}\`"
-                        title="Verification Video"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                    ></iframe>
-                    <p style="text-align:center; margin-top: 8px;">
-                        Level ID: {{ selectedLevel.id }} &nbsp;&nbsp;&nbsp;
-                        Points Awarded: {{ calcScore(selectedLevel, 100).toFixed(2) }} &nbsp;&nbsp;&nbsp;
-                        Password: {{ selectedLevel.password }}
-                    </p>
-                </div>
-
-                <!-- Box 2: Records with striped layout -->
-                <div class="level-records-box">
-                    <p style="text-align:center; font-weight:500;">Records</p>
-                    <p style="text-align:center; font-size:0.9rem;">
-                        {{ selectedLevel.percentToQualify }}% or better required to qualify
-                    </p>
-                    <p style="text-align:center; font-size:0.85rem;">
-                        {{ selectedLevel.records.length }} completions overall registered.
-                    </p>
-
-                    <!-- Header Bar -->
-                    <div class="record-header">
-                        <div>Record Holder</div>
-                        <div>Video Proof</div>
-                    </div>
-
-                    <!-- Record Rows -->
-                    <div 
-                        class="record-row" 
-                        v-for="(record, idx) in selectedLevel.records" 
-                        :key="idx" 
-                        :class="{'even-row': idx % 2 === 0, 'odd-row': idx % 2 !== 0}"
-                    >
-                        <div>{{ record.user || '-' }}</div>
-                        <div>
-                            <a 
-                                v-if="record.link" 
-                                :href="record.link" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                            >
-                                YouTube
-                            </a>
-                            <span v-else>-</span>
-                        </div>
-                    </div>
-
-                    <button @click="deselectLevel()" style="margin-top:12px; display:block; margin-left:auto; margin-right:auto;">Back</button>
-                </div>
-            </div>
-
-            <!-- Guidelines box with close button -->
-            <div v-if="showGuidelines" class="guidelines-box" :class="{ shifted: selectedLevel }">
-                <button class="close-btn" @click="closeGuidelines">×</button>
-                <h2>Guidelines</h2>
-                <hr />
-                <p>All demonlist operations are carried out in accordance to our guidelines. Be sure to check them before submitting a record to ensure a flawless experience!</p>
-                <p>CBF usage is permitted.</p>
-                <p>Make sure to include split audio tracks for a faster review of your record.</p>
-                <p>For a level harder than Carmine Clutter, you must also include raw footage of your recording.</p>
-                <p>Physics Bypass is not allowed and will get your record rejected.</p>
-                <p>If you have Mega Hack, make sure to enable cheat indicator upon reaching the end screen, as well as the ingame clock.</p>
-                <p>Make sure that the recording shows a few frames of the end card dropping down.</p>
-            </div>
-        </main>
-    `
 };
