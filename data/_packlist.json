@@ -1,62 +1,10 @@
 [
       
       {
-        "name": "Legacy Pack",
+        "name": "Test Pack",
         "levels": [
-            "cleansed_in_ice",
-            "invisible_witburst",
-            "the_hallucination",
-            "cryon",
-            "new_ping_rates",
-            "demories",
-            "let_the_base_kick",
-            "ghost_castle",
-            "thanatos",
-            "memory_delusions",
-            "unused_objects",
-            "hot_road",
-            "my_brain_is_fried",
-            "blackout",
-            "xan_circles",
-            "ice_water_the_dont",
-            "outlaw"
+          "fructose_overdose"
         ],
         "colour": "linear-gradient(145deg, rgba(154,158,173,1) 0%, rgba(115,120,140,1) 50%, rgba(82,86,105,1) 100%)"
-    },
-    {
-        "name": "Medium Pack I",
-        "levels": [
-            "homeswitcher",
-            "mayday",
-            "glisten19"
-        ],
-        "colour": "linear-gradient(3deg, rgba(144,148,209,1) 0%, rgba(121,124,168,1) 50%, rgba(92,94,125,1) 100%)"
-    },
-         {
-        "name": "Layout Pack I",
-        "levels": [
-            "violet",
-            "not_a_layout",
-            "birds"
-        ],
-        "colour": "linear-gradient(90deg, rgba(144,209,209,1) 0%, rgba(119,163,163,1) 50%, rgba(82,105,105,1) 100%)"
-    },
-     {
-        "name": "Death Jumper Trilogy",
-        "levels": [
-            "death_jumper_minus",
-            "death_jumper",
-            "death_jumper_plus"
-        ],
-        "colour": "linear-gradient(145deg, rgba(173,154,154,1) 0%, rgba(140,115,115,1) 50%, rgba(105,82,82,1) 100%)"
-    },
-     {
-        "name": "G BACK TO BACK TO BACK",
-        "levels": [
-            "glisten19",
-            "glissade",
-            "grateful"
-        ],
-        "colour": "linear-gradient(32deg, rgba(222,69,145,1) 0%, rgba(235,94,164,1) 50%, rgba(237,147,192,1) 100%)"
     }
 ]
