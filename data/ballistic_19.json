@@ -1,0 +1,27 @@
+{
+    "id": 121,
+    "name": "Ballistic 19",
+    "author": "2rus",
+    "creators": [],
+    "verifier": "2rus",
+    "verification": "https://www.youtube.com/watch?v=KXJb7URzdcI",
+    "percentToQualify": 100,
+    "password": "Copyable",
+    "records": [
+         {
+			"user": "Rae",
+			"link": "https://www.youtube.com/watch?v=iCM-eha6TlI",
+			"percent": 100,
+			"hz": 360,
+            "enjoyment": 50
+		}
+        {
+			"user": "JosherIsFun",
+			"link": "https://youtu.be/C7wCNgnXbEc",
+			"percent": 100,
+			"hz": 360,
+            "enjoyment": 50
+		}
+        
+    ]
+}
