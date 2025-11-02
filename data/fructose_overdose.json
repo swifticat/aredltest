@@ -12,13 +12,15 @@
 			"user": "Rae",
 			"link": "https://youtu.be/IdbcFKqfkPI",
 			"percent": 100,
-			"hz": 360
+			"hz": 360,
+            "enjoyment": 50
 		}
         {
 			"user": "ToxicHQ",
 			"link": "https://youtu.be/eJF8tdnjKDE",
 			"percent": 100,
-			"hz": 240
+			"hz": 240,
+            "enjoyment": 50
 		}
         
     ]
