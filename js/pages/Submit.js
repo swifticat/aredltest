@@ -59,6 +59,7 @@ export default {
 		rawfootage: '',
 		notes: '',
 		percentage: 0,
+        enjoyment: 0,
 		error: '',
 		errortimes: 0,
 	}),
@@ -72,7 +73,7 @@ export default {
 
 	methods: {
 		sendWebhook() {
-			if (this.level === 'Select level*' || this.holder === '' || this.footage === '' || this.percentage < 0 || this.percentage > 100) {
+			if (this.level === 'Select level*' || this.holder === '' || this.footage === '' || this.percentage < 0 || this.percentage > 100 || this.enjoyment < 0 || this.enjoyment > 100) {
 				this.errortimes += 1
 				switch (this.errortimes) {
 					case 3:
@@ -147,6 +148,10 @@ export default {
 										name: 'Percentage',
 										value: this.percentage,
 									},
+                                    {
+                                        name: 'Enjoyment',
+                                        value: this.enjoyment,
+                                    },
 									{
 										name: 'Video',
 										value: this.footage,
