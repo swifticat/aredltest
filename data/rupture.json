@@ -1,0 +1,20 @@
+{
+    "id": 115,
+    "name": "Rupture",
+    "author": "NekoDoubleBet",
+    "creators": [],
+    "verifier": "NekoDoubleBet",
+    "verification": "https://youtu.be/Q8MLiCVCp_s?si=nm75ojcxi2VDTRhn",
+    "percentToQualify": 100,
+    "password": "Copyable",
+    "records": [
+         {
+			"user": "Rae",
+			"link": "https://youtu.be/aYwcibYUXX4",
+			"percent": 100,
+			"hz": 360,
+            "enjoyment": 50
+		}
+        
+    ]
+}
