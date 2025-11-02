@@ -91,14 +91,16 @@
 }
 .page-list .level-container .level .records .percent,
 .page-list .level-container .level .records .user,
-.page-list .level-container .level .records .hz {
+.page-list .level-container .level .records .hz,
+.page-list .level-container .level .records .enjoyment {
     padding-block: 1rem;
 }
 .page-list .level-container .level .records .user {
     width: 100%;
 }
 .page-list .level-container .level .records .percent,
-.page-list .level-container .level .records .hz {
+.page-list .level-container .level .records .hz,
+.page-list .level-container .level .records .enjoyment {
     text-align: end;
 }
 .page-list .meta-container .og a:hover,
