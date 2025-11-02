@@ -25,6 +25,11 @@ export default {
 						<input type="number" min="0" max="100" v-model="percentage" name="record-percentage-num" id="record-percentage-num" placeholder="Percentage*" required>
 						<input type="range" min="0" max="100" v-model="percentage" name="record-percentage" id="record-percentage" placeholder="Percentage*" required>
 					</div>
+
+                    <div id="enjoyment-div">
+						<input type="number" min="0" max="100" v-model="enjoyment" name="record-enjoyment-num" id="record-enjoyment-num" placeholder="Enjoyment*" required>
+						<input type="range" min="0" max="100" v-model="enjoyment" name="record-enjoyment" id="record-enjoyment" placeholder="Enjoyment*" required>
+					</div>
 					<input type="text" v-model="footage" name="record-footage" id="record-footage" placeholder="Video*" required>
 		
 					<input type="text" v-model="rawfootage" name="record-rawfootage" id="record-rawfootage" placeholder="Raw Footage">
