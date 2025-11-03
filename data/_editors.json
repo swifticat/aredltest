@@ -9,11 +9,6 @@
 		]
 	},
 
-	{
-		"role": "helper",
-		"members": [
-		]
-	},
     {
 		"role": "dev",
 		"members": [
