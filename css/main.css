@@ -185,28 +185,27 @@ input[type="checkbox"] {
     margin: 0;
 }
 
-/* FLAG STYLING */
+/* Flag Styling for the Leaderboard */
 .country-flag {
     width: 2rem;
     height: auto;
-    margin-right: 0.5rem;
-    vertical-align: middle;
-    display: inline-block;
+    margin-right: 0.5rem; /* Space between flag and username */
+    vertical-align: middle; /* Ensure flag aligns well with text */
+    display: inline-block; /* Ensures flag aligns horizontally */
 }
 
 .user {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    display: flex; /* Make the user container a flex container */
+    align-items: center; /* Vertically align content in the center */
+    gap: 0.5rem; /* Space between flag and player name */
 }
 
 .flag-icon {
-    border-radius: 5px;
-    width: 24px;
+    border-radius: 5px; /* Adjust the value to make it more or less rounded */
+    width: 24px; /* Ensure the flags are the right size */
     height: 16px;
     display: inline-block;
 }
-
 /* REMOVE UNDERLINES GLOBALLY */
 a, a:visited, a:hover, a:active, button {
     text-decoration: none;
