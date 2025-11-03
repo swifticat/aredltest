@@ -154,6 +154,15 @@ export async function fetchLeaderboard() {
         // }
     }
 
+        // Fetch country data
+    let countryData = {};
+    try {
+        const countryResult = await fetch(`${dir}/_countries.json`);
+        countryData = await countryResult.json();
+    } catch {
+        errs.push("Failed to load country data.");
+    }
+
     // Wrap in extra Object containing the user and total score
     const res = Object.entries(scoreMap).map(([user, scores]) => {
         const { verified, completed, progressed } = scores;
@@ -229,3 +238,18 @@ export async function fetchPackLevels(packname) {
         return null;
     }
 }
+
+    // Wrap in extra Object containing the user, total score, and country
+    const res = Object.entries(scoreMap).map(([user, scores]) => {
+        const { verified, completed, progressed } = scores;
+        const total = [verified, completed, progressed]
+            .flat()
+            .reduce((prev, cur) => prev + cur.score, 0);
+
+        return {
+            user,
+            total: round(total),
+            country: countryData[user] || 'US', // Default to 'US' if no country found
+            ...scores,
+        };
+    });
