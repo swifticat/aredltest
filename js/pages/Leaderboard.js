@@ -35,8 +35,7 @@ export default {
                             </td>
                             <td class="user" :class="{ 'active': selected == i }">
                                 <button @click="selected = i">
-                                 <span class="type-label-lg">
-                                    </span>
+                                    <span class="type-label-lg">{{ ientry.user }}</span>
                                 </button>
                             </td>
                         </tr>
