@@ -80,7 +80,7 @@ export default {
                                 <p>{{ record.hz }}Hz</p>
                             </td>
                               <td class="enjoyment">
-                                <p>{{ record.enjoyment }} Enjoyment</p>
+                                <p>{{ record.enjoyment }}/100 Enjoyment</p>
                             </td>
                         </tr>
                     </table>
