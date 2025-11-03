@@ -49,9 +49,10 @@
 .page-list .level-container .level {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding-right: 2rem;
-    max-width: 48rem;
+    justify-content: center;
+    flex: 1;
+    min-width: 0;
+    font-family: "Lexend Deca", sans-serif;
 }
 .page-list .level-container .level .level-authors {
     display: grid;
