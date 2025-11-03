@@ -194,14 +194,14 @@ export default {
         editors: [],
         supporters: [],
         loading: true,
-        selected: 1,
+        selected: 0,
         errors: [],
         roleIconMap,
         store,
     }),
     computed: {
         level() {
-            return this.list[this.selected][1];
+            return this.list[this.selected][0];
         },
     },
     async mounted() {
