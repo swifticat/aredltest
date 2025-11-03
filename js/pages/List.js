@@ -121,7 +121,7 @@ export default {
                         When submitting your record, please ensure that it complies with the following guidelines:
                     </p>
                     <p>
-                        - Your recording is a complete playthrough of the level from 0-100 without any cuts (if there are cuts in your video, please include an uncut raw footage)
+                        - Your recording is a complete playthrough of the level from 0-100 without any cuts (if there are cuts in your video, please include uncut raw footage)
                     </p>
                      <p>
                         - Your completion needs to have clicks. If it doesn't (or if it only does for a part of the level, and not the entire run), you have to provide raw footage with clicks. If you don't, your record will be rejected. Mobile players are NOT exempt from this rule, recorded taps are required.  
