@@ -201,7 +201,7 @@ export default {
     }),
     computed: {
         level() {
-            return this.list[this.selected];
+            return this.list[this.selected][0];
         },
     },
     async mounted() {
