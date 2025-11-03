@@ -43,7 +43,7 @@
     color: var(--color-on-background-hover);
 }
 .page-list .list .level.active button {
-    background-color: var(--color-primary);
+    background-color: rgba(135, 206, 250, 0.1);
     color: var(--color-on-primary);
 }
 .page-list .level-container .level {
