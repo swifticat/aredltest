@@ -18,7 +18,7 @@ const scale = 1;
  */
 export function score(rank, percent, minPercent, levelCount) {
     const b = (levelCount - 1) * baseFactor
-    const a = 600 * Math.sqrt(b)
+    const a = 500 * Math.sqrt(b)
 	// console.log(b)
 	// console.log(a)
 
@@ -40,7 +40,7 @@ export function score(rank, percent, minPercent, levelCount) {
 
 export function calculateScores(levelCount) {
     const b = (levelCount - 1) * baseFactor;
-    const a = 600 * Math.sqrt(b);
+    const a = 500 * Math.sqrt(b);
 
     let scores = [];
     for (let rank = 0; rank < levelCount; ++rank) {
