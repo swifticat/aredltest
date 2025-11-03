@@ -87,7 +87,6 @@
     table-layout: fixed;
 }
 .page-list .level-container .level .records tr td:not(:last-child) {
-    padding-right: 1rem;
 }
 .page-list .level-container .level .records .percent,
 .page-list .level-container .level .records .user,
