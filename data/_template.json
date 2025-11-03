@@ -1,11 +1,27 @@
 {
-    "id": 1252,
-    "name": "Cauli",
-    "author": "doom",
+    "id": 163,
+    "name": "fructose overdose",
+    "author": "flyingduck91",
     "creators": [],
-    "verifier": "doom",
-    "verification": "https://www.youtube.com/watch?v=9TxPWnzLBW4",
+    "verifier": "flyingduck91",
+    "verification": "https://www.youtube.com/watch?v=YvhVxpRkcE4",
     "percentToQualify": 100,
     "password": "Copyable",
-    "records": []
+    "records": [
+         {
+			"user": "Rae",
+			"link": "https://youtu.be/IdbcFKqfkPI",
+			"percent": 100,
+			"hz": 360,
+            "enjoyment": 50
+		},
+        {
+			"user": "ToxicHQ",
+			"link": "https://youtu.be/eJF8tdnjKDE",
+			"percent": 100,
+			"hz": 240,
+            "enjoyment": 50
+		}
+        
+    ]
 }
