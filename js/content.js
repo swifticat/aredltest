@@ -154,8 +154,6 @@ export async function fetchLeaderboard() {
         // }
     }
 
-
-
     // Wrap in extra Object containing the user and total score
     const res = Object.entries(scoreMap).map(([user, scores]) => {
         const { verified, completed, progressed } = scores;
@@ -231,6 +229,3 @@ export async function fetchPackLevels(packname) {
         return null;
     }
 }
-
-
-    );
