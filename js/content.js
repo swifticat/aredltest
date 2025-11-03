@@ -239,17 +239,5 @@ export async function fetchPackLevels(packname) {
     }
 }
 
-    // Wrap in extra Object containing the user, total score, and country
-    const res = Object.entries(scoreMap).map(([user, scores]) => {
-        const { verified, completed, progressed } = scores;
-        const total = [verified, completed, progressed]
-            .flat()
-            .reduce((prev, cur) => prev + cur.score, 0);
 
-        return {
-            user,
-            total: round(total),
-            country: countryData[user] || 'US', // Default to 'US' if no country found
-            ...scores,
-        };
     });
