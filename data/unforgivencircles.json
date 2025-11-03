@@ -8,7 +8,7 @@
     "percentToQualify": 100,
     "password": "Copyable",
     "records": [
-         {
+        {
 			"user": "Rae",
 			"link": "https://youtu.be/IYOHm9ZCluk",
 			"percent": 100,
@@ -19,8 +19,10 @@
 			"user": "ToxicHQ",
 			"link": "https://youtu.be/jtw9ySf_Igk",
 			"percent": 100,
-			"hz": 240,
-      "enjoyment": 50
-      }
-
+			"hz": 360,
+            "enjoyment": 50
+		}
+        
+        }
     ]
+
