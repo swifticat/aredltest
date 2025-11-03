@@ -123,7 +123,6 @@ export async function fetchLeaderboard() {
                 rank: rank + 1,
                 level: level.name,
                 percent: record.percent,
-                enjoyment: record.enjoyment,
                 score: score(rank + 1, record.percent, level.percentToQualify, list.length),
                 link: record.link,
                 path: level.path,
