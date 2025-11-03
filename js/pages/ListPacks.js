@@ -70,6 +70,7 @@ export default {
                             </td>
                             <td class="hz">
                                 <p>{{ record.hz }}Hz</p>
+                            </td>
                             <td class="enjoyment">
                                 <p>{{ record.enjoyment }}Enjoyment</p>                                
                             </td>
