@@ -3,70 +3,23 @@
 		"role": "owner",
 		"members": [
 			{
-				"name": "Skoe",
-				"link": "https://www.youtube.com/channel/UC4N25ULgPMmeKv5XwgJD5-A"
+				"name": "Rae",
+				"link": "https://www.youtube.com/@Raezori"
 			}
 		]
 	},
-      {
-    "role": "admin",
-		"members": [
-                         {
-				"name": "Kubix"
-			},
-              {
-				"name": "mathey"
-			}
-        ]
-	 },
+
 	{
 		"role": "helper",
 		"members": [
-			{
-				"name": "bal",
-				"link": "https://www.youtube.com/noclue"
-			},
-			  {
-				"name": "Skylar"
-			},
-              {
-				"name": "Rae"
-			},
-              {
-				"name": "R3SERT1"
-			},
-                          {
-				"name": "kal"
-			},
-                          {
-				"name": "gamecheese"
-			},
-                          {
-				"name": "Hexy"
-			},
-                          {
-				"name": "Xan"
-			},
-                          {
-				"name": "yeeee"
-			},
-                          {
-				"name": "Shumbs"
-			},
-                          {
-				"name": "swifticat"
-			},
-                        {
-				"name": "Firelia"
-			}
 		]
 	},
     {
 		"role": "dev",
 		"members": [
             {
-				"name": "doom",
-				"link": "https://www.youtube.com/@igndoom"
+				"name": "swifticat",
+				"link": "https://www.youtube.com/@swifticat2"
 			}
 		]
 	}
