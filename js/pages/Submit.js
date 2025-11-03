@@ -27,7 +27,7 @@ export default {
 					</div>
 
                     <div id="enjoyment-div">
-						<input type="number" min="0" max="100" v-model="enjoyment" name="record-enjoyment-num" id="record-enjoyment-num" placeholder="Enjoyment*" required>
+						<input type="number" max="100" v-model="enjoyment" name="record-enjoyment-num" id="record-enjoyment-num" placeholder="Enjoyment*" required>
 					</div>
 					<input type="text" v-model="footage" name="record-footage" id="record-footage" placeholder="Video*" required>
 		
