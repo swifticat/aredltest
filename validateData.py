@@ -35,6 +35,7 @@ level_schema = {
                     "link": {"type": "string"},
                     "percent": {"type": "number"},
                     "hz": {"type": "number"},
+                    "enjoyment": {"type": "number"},
                     "mobile": {"type": "boolean"}
                 }
             }
