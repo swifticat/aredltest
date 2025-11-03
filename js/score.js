@@ -4,7 +4,7 @@
  * 
  * current basefactor for minpoints = 1
  */
-const baseFactor = 0.001;
+const baseFactor = 1;
 
 const scale = 1;
 
