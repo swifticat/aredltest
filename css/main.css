@@ -1,14 +1,3 @@
-:root {
-    --color-background: white;
-    --color-on-background: black;
-    --color-background-hover: #eee;
-    --color-on-background-hover: black;
-    --color-primary: #000000;
-    --color-on-primary: white;
-    --color-primary-disabled: #1f213c;
-    --color-error: #de0000;
-    --color-on-error: white;
-}
 
 /* Dark-mode variables when applied to body/main/header that has .dark */
 body.dark,
