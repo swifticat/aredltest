@@ -94,9 +94,6 @@ export default {
                     <div class="errors" v-show="errors.length > 0">
                         <p class="error" v-for="error of errors">{{ error }}</p>
                     </div>
-                    <div class="og">
-                        <p class="type-label-md">Original List by <a href="https://tsl.pages.dev/#/" target="_blank">TheShittyList</a></p>
-                    </div>
                     <template v-if="editors">
                         <h3 align="center">List Editors</h3>
                         <ol class="editors">
