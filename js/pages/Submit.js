@@ -178,6 +178,7 @@ export default {
 					this.holder = ''
 					this.footage = ''
 					this.rawfootage = ''
+                    this.enjoyment = ''
 					this.notes = ''
 					this.sent = true
 					this.error = ''
