@@ -526,7 +526,6 @@ main:not(.dark) .level-detail-box button:hover {
    We mirror the theme on the <body> via main.js so this works reliably.
 */
 body:not(.dark) {
-  background-image: url("/assets/background-light.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
