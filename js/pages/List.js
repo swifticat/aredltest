@@ -130,19 +130,19 @@ export default {
                     - Your completion must contain at least a second of a previous attempt, including the death. If the completion does not comply, it will be denied and you will be asked to provide raw footage. If the record was achieved on the first attempt it is exempt from this rule.
                 </p>
                     <p>
-                        - Achieved the record on the level that is listed on the site (or an approved LDM of it) - please check the level ID before you submit a record
+                        - Make sure you have beaten the correct level by checking it's ID. If you need to use an LDM copy, please make a request for one in our Discord.
                     </p>
                     <p>
-                        - The record has been achieved without using a secret way or a bugged route
+                        - The record must have been achieved without using a secret way or a bugged route.
                     </p>
                     <p>
-                        - End stats (The whole box must appear for at least one frame)
+                        - The footage must show the end stats (The whole box must appear for at least one frame).
                     </p>
                     <p>
-                        - FPS/TPS counter is required up to 360 fps/tps
+                        - An FPS/TPS counter is required up to 360 fps/tps.
                     </p>
                     <p>
-                        - You always need handcam for every level that is listed as "(Solo)" on the list.
+                        - You always need a handcam for every level that is listed as "(Solo)" on the list.
                     </p>
                     <p>
                         - Refer to <a href="https://docs.google.com/spreadsheets/d/10AjUUcTpAzOqdfnbz0wtYskL9TdwT4Onv_Fldt5NXBg/edit?usp=sharing">-This Sheet-</a> for a list of allowed and disallowed hacks
