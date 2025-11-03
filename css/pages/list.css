@@ -518,7 +518,7 @@ main:not(.dark) .level-detail-box button:hover {
   position: relative;
   min-height: 100vh;
   background-color: var(--color-background);
-  background-image: none;
+  background-image: url("/assets/background-light.jpg");
 }
 
 /* Move the background to <body> in light mode so it stays under everything and remains fixed.
